@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 217 33% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 33% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 17%;
+
+    /* Deep blue primary */
+    --primary: 217 91% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light blue accent */
+    --accent: 206 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 217 33% 17%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 20%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 20%), hsl(206 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(217 91% 20% / 0.1), 0 2px 4px -1px hsl(217 91% 20% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(217 91% 20% / 0.15), 0 4px 6px -2px hsl(217 91% 20% / 0.1);
+    --shadow-glow: 0 0 20px hsl(206 100% 50% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 217 33% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 217 33% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 217 33% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 206 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 206 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 206 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
